@@ -18,7 +18,7 @@ int[ ] numeros3 = new int [ ] {1,2,3,4,5};
 
 
 ## *O que é um array em Java?*
-Um array é uma estrutura de dados que armazena elementos de um mesmo tipo de forma contígua na memória. O índice do 
+É uma estrutura de dados que armazena vários valores do mesmo tipo em uma única variável. O índice do 
 primeiro elemento é sempre 0, e o último elemento tem índice tamanho - 1.
 
 ### *Percorrendo um array com for*
