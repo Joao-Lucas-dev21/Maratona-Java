@@ -1,8 +1,8 @@
-package Exercicios.test;
+package Exercicios.Sistemas.test;
 
-import Exercicios.dominio.Pedido;
-import Exercicios.dominio.TipoCliente;
-import Exercicios.dominio.TipoPagamento;
+import Exercicios.Sistemas.dominio.Pedido;
+import Exercicios.Sistemas.dominio.TipoCliente;
+import Exercicios.Sistemas.dominio.TipoPagamento;
 
 public class PedidoTest01 {
     public static void main(String[] args) {

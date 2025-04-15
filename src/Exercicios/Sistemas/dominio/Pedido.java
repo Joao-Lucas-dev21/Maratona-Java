@@ -1,4 +1,4 @@
-package Exercicios.dominio;
+package Exercicios.Sistemas.dominio;
 
 public class Pedido {
     private String nomeCliente;

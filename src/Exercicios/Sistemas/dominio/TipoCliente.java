@@ -1,4 +1,4 @@
-package Exercicios.dominio;
+package Exercicios.Sistemas.dominio;
 
 public enum TipoCliente {
     PESSOA_FISICA("Pessoa Física"),
