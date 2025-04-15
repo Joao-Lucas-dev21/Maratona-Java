@@ -51,7 +51,19 @@ public class Calculadora {
 
     //Desafio01: Criar uma calculadora que verifica se um número é primo ou não
     // Retornar true se for primo, false caso contrário.
-    
 
+    public boolean validaP(int valor) {
+        if (valor <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i < valor; i++) {
+            if (valor % i == 0) {
+                System.out.println("Calculando a divisão do: " + valor + " por" + i);
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
