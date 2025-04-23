@@ -1,19 +1,21 @@
 package Exercicios;
 
+import java.util.Scanner;
+//Faça um algoritmo que leia dois valores booleanos (lógicos)
+// e determine se ambos são VERDADEIRO ou FALSO.
+
 public class Exercicio07 {
     public static void main(String[] args) {
-        //7 - Faça um algoritmo que leia dois valores booleanos (lógicos)
-        // e determine se ambos são VERDADEIRO ou FALSO.
+        Scanner dados = new Scanner(System.in);
+        System.out.println("Digite true ou false: ");
+        boolean valor1 = dados.nextBoolean();
+        System.out.println("Digite true ou false mais uma vez: ");
+        boolean valor2 = dados.nextBoolean();
 
-        boolean valor1 = false;
-        boolean valor2 = false;
-
-        if (valor1 == true & valor2 == true){
-            System.out.println("Ambos verdadeiro!");
-        } else if (valor1 == false & valor2 == false){
-            System.out.println("Ambos falso!");
-        } else {
-            System.out.println("Valores diferentes!");
+        if (valor1 != valor2){
+            System.out.println("Valores diferentes");
+        } else{
+            System.out.println("Valores iguais");
         }
     }
 }

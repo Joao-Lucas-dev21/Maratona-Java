@@ -1,15 +1,17 @@
 package Exercicios;
 
-public class Exercicio04 {
-    public static void main(String[] args){
-        //4 - Faça um algoritmo que receba um número inteiro
-        // e imprima na tela o seu antecessor e o seu sucessor.
+import java.util.Scanner;
 
-        int numero = 3;
-        int antecessor = numero -1;
-        int sucessor = numero +1;
-        System.out.println("Número: "+numero);
-        System.out.println("Sucessor: "+ sucessor);
-        System.out.println("Antecessor: "+ antecessor);
+//Faça um algoritmo que receba um número inteiro e
+// imprima na tela o seu antecessor e o seu sucessor.
+public class Exercicio04 {
+    public static void main(String[] args) {
+        Scanner dados = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int num = dados.nextInt();
+        int antecessor = num - 1;
+        int sucessor = num + 1;
+        System.out.println("Número antecessor do " + num + " é : " + antecessor);
+        System.out.println("Número sucessor do " + num + " é : " + sucessor);
     }
 }

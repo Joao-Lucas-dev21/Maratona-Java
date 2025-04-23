@@ -1,18 +1,18 @@
 package Exercicios;
 
+import java.util.Scanner;
+
+//Faça algoritmo que leia o nome e a idade de uma peso e imprima na tela o nome da pessoa e
+// se ela é maior ou menor de idade.
 public class Exercicio13 {
     public static void main(String[] args) {
-        //Crie um programa que conte quantas vezes um número aparece dentro de um array.
-
-        int[] lista = {3, 5, 3, 2, 3, 7, 8, 3};
-        int numeroprocurado = 3;
-        int vezes = 0;
-
-        for (int i = 0; i < lista.length; i++) {
-            if (numeroprocurado == lista[i]) {
-                vezes += 1;
-            }
+        Scanner dados = new Scanner(System.in);
+        System.out.println("Digite sua idade: ");
+        int idade = dados.nextInt();
+        if (idade >= 18){
+            System.out.println("Maior de idade");
+        } else{
+            System.out.println("Menor de idade");
         }
-        System.out.println("O número " + numeroprocurado + " aparece " + vezes + " no array");
     }
 }

@@ -1,12 +1,16 @@
 package Exercicios;
+//Faça um algoritmo que leia um valor qualquer e imprima na tela
+// com um reajuste de 5%.
+
+import java.util.Scanner;
 
 public class Exercicio06 {
     public static void main(String[] args) {
-        //6 - Faça um algoritmo que leia um valor qualquer e
-        // imprima na tela com um reajuste de 15%.
-
-        double valor = 230;
-        double reajuste = valor + (valor * 15 / 100);
-        System.out.println(reajuste);
+        Scanner dados = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int valor = dados.nextInt();
+        System.out.println("Reajuste de 5%");
+        double valorReajustado = valor + valor * 0.05;
+        System.out.println("Resultado: " + valorReajustado);
     }
 }
