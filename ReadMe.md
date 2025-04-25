@@ -369,3 +369,78 @@ Uma interface em Java é um contrato que define métodos que uma classe deve imp
 
 Ao implementar um método da interface, você só pode manter ou aumentar a visibilidade. 
 
+## Polimorfismo
+
+Na prática, ele permite que um mesmo método ou objeto se comporte de diferentes formas, dependendo do contexto. Ou seja, um objeto pode ser tratado como se fosse de sua superclasse ou de uma interface.
+
+Exemplo do mundo real
+Imagine uma função chamada fazerSom(Animal a):
+
+Se o a for um Cachorro, ele late.
+
+Se o a for um Gato, ele mia.
+
+Se o a for um Leão, ele ruge.
+
+Mesmo método (fazerSom) — comportamento diferente, dependendo do tipo real do objeto.
+
+Tipos de Polimorfismo
+
+Polimorfismo de sobrescrita (override) – como o exemplo acima. Uma subclasse reimplementa um método da superclasse.
+
+Polimorfismo de sobrecarga (overload) – quando você cria métodos com o mesmo nome, mas parâmetros diferentes:
+
+
+## Exceções
+
+![img_13.png](img_13.png)
+
+Throwable
+
+É a superclasse para qualquer coisa que possa ser lançada (throw) ou capturada (catch).
+
+Tem dois grandes filhos:
+
+Error → Erros graves, geralmente da JVM.
+
+Exception → Situações que o programador pode tratar.
+
+---
+### *Exception*
+
+São os problemas esperados que podem acontecer durante a execução do programa, como:
+
+Leitura de arquivos
+
+Conexão com banco de dados
+
+Operações inválidas
+
+---
+
+Tipos de Exception:
+
+Checked Exceptions
+
+O compilador obriga a tratar com try/catch ou throws.
+
+Ex: IOException, SQLException, ParseException
+
+Unchecked Exceptions (RuntimeException)
+
+Não são obrigatórias de tratar.
+
+Ex: NullPointerException, ArrayIndexOutOfBoundsException, ArithmeticException
+
+### *Usando Logger para registrar o erro*
+
+Você pode usar a biblioteca de logging java.util.logging.Logger para registrar os detalhes do erro.
+
+![img_14.png](img_14.png)
+Explicação:
+
+Logger: O Logger é configurado para registrar a mensagem de erro e a exceção. Isso ajuda a monitorar o que aconteceu no seu sistema de maneira eficiente, sem expor detalhes desnecessários.
+
+Level.SEVERE: É o nível de log usado para registrar erros graves. Você pode alterar o nível de acordo com a importância da mensagem (outros níveis incluem INFO, WARNING, etc.).
+
+Mensagem amigável: Em vez de exibir a stack trace diretamente, você mostra uma mensagem amigável para o usuário, sem expor detalhes do erro.
