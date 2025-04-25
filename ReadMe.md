@@ -392,9 +392,7 @@ Polimorfismo de sobrecarga (overload) – quando você cria métodos com o mesmo
 
 
 ## Exceções
-
-![img_13.png](img_13.png)
-
+![img_15.png](img_15.png)
 Throwable
 
 É a superclasse para qualquer coisa que possa ser lançada (throw) ou capturada (catch).
@@ -444,3 +442,9 @@ Logger: O Logger é configurado para registrar a mensagem de erro e a exceção.
 Level.SEVERE: É o nível de log usado para registrar erros graves. Você pode alterar o nível de acordo com a importância da mensagem (outros níveis incluem INFO, WARNING, etc.).
 
 Mensagem amigável: Em vez de exibir a stack trace diretamente, você mostra uma mensagem amigável para o usuário, sem expor detalhes do erro.
+
+### Lançando exceção checked
+
+Utiliza throw new quando queremos lançar uma exceção, geramalmente da função runtime, mas também pode ser vindo de exception do tipo cheked
+
+Quando está trabalhando com o throw new e é do tipo runtime não existe a necessidade de colocar na assinatura do metódo um aviso pra quem está chamando, mas é obrigatório quando as exceções são do tipo cheked, ou seja, são filhas de exceptions 
