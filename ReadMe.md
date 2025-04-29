@@ -459,3 +459,6 @@ Capturando múltiplas exceções caso haja uma exceção ela vai procurar o catc
 
 pode se utilizar a mais generica também
 Mas não podemos colocar um tipo mais generico a frente dos outros catch, pois sempre que o mais generico estiver a frente dos outros ela sempre irá cair no mais generico
+
+Try with resources você so pode colocar objetos ou variaveis de referencias dentro do Try with resources que implementem a interface closeable e Autocloseable, pois assim o java conseguira chamar o closeable
+São fechados na ordem inversa que eles são declarados
