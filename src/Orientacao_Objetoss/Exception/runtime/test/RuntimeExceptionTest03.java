@@ -23,7 +23,7 @@ public class RuntimeExceptionTest03 {
         try {
             System.out.println("Abrindo arquivo");
             System.out.println("Escrevendo dados no arquivos");
-            throw new RuntimeException():
+            throw new RuntimeException();
         } finally {
             System.out.println("Fechando recurso liberado pelo SO");
         }
