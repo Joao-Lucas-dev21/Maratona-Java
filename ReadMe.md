@@ -449,8 +449,13 @@ Utiliza throw new quando queremos lançar uma exceção, geralmente da função 
 
 Quando está trabalhando com o throw new e é do tipo runtime não existe a necessidade de colocar na assinatura do metódo um aviso pra quem está chamando, mas é obrigatório quando as exceções são do tipo cheked, ou seja, são filhas de exceptions 
 
-Caso estaja criando um metódo privado as chance de acabar utilizando é o try cath 
+Caso estaja criando um metódo privado as chance de acabar utilizando é o try catch 
 
 Quando você lança uma exceção do tipo IOException você é obrigado a colocar o throws na assinatura
 
 finally é sempre executado independente se está retornando alguma coisa
+
+Capturando múltiplas exceções caso haja uma exceção ela vai procurar o catch que melhor se adpta
+
+pode se utilizar a mais generica também
+Mas não podemos colocar um tipo mais generico a frente dos outros catch, pois sempre que o mais generico estiver a frente dos outros ela sempre irá cair no mais generico
