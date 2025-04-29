@@ -452,3 +452,5 @@ Quando está trabalhando com o throw new e é do tipo runtime não existe a nece
 Caso estaja criando um metódo privado as chance de acabar utilizando é o try cath 
 
 Quando você lança uma exceção do tipo IOException você é obrigado a colocar o throws na assinatura
+
+finally é sempre executado independente se está retornando alguma coisa
