@@ -8,7 +8,7 @@ public class ExceptionTest02 {
         criarNovoArquivo();
     }
 
-    private static void criarNovoArquivo() throws IOException {
+    public static void criarNovoArquivo() throws IOException {
         File file = new File("arquivo\\teste.txt");
         try {
             boolean isCriado = file.createNewFile();
@@ -16,6 +16,8 @@ public class ExceptionTest02 {
         } catch (IOException e) {
             e.printStackTrace();
             throw e;
+            // throw new RuntimeException("Problema na hora de criar o arquivo");
+            // fazendo isto, não precisa não precisa fazer o tratamento de IoException, posso apagar a assinatura
         }
     }
 }

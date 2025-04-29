@@ -445,6 +445,10 @@ Mensagem amigável: Em vez de exibir a stack trace diretamente, você mostra uma
 
 ### Lançando exceção checked
 
-Utiliza throw new quando queremos lançar uma exceção, geramalmente da função runtime, mas também pode ser vindo de exception do tipo cheked
+Utiliza throw new quando queremos lançar uma exceção, geralmente da função runtime, mas também pode ser vindo de exception do tipo cheked
 
 Quando está trabalhando com o throw new e é do tipo runtime não existe a necessidade de colocar na assinatura do metódo um aviso pra quem está chamando, mas é obrigatório quando as exceções são do tipo cheked, ou seja, são filhas de exceptions 
+
+Caso estaja criando um metódo privado as chance de acabar utilizando é o try cath 
+
+Quando você lança uma exceção do tipo IOException você é obrigado a colocar o throws na assinatura
