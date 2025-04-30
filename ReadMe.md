@@ -443,23 +443,75 @@ Level.SEVERE: É o nível de log usado para registrar erros graves. Você pode a
 
 Mensagem amigável: Em vez de exibir a stack trace diretamente, você mostra uma mensagem amigável para o usuário, sem expor detalhes do erro.
 
-### Lançando exceção checked
+### Lançando exceções (checked e unchecked)
+    Em Java, usamos a palavra-chave throw para lançar uma exceção:
+    public void lerArquivo(String nome) throws IOException {
+        if (nome == null) {
+            throw new IOException("Nome do arquivo é nulo");
+        }
+    }
 
-Utiliza throw new quando queremos lançar uma exceção, geralmente da função runtime, mas também pode ser vindo de exception do tipo cheked
+### Uso de throw e throws
+throw: usado para lançar uma exceção.
 
-Quando está trabalhando com o throw new e é do tipo runtime não existe a necessidade de colocar na assinatura do metódo um aviso pra quem está chamando, mas é obrigatório quando as exceções são do tipo cheked, ou seja, são filhas de exceptions 
+throws: usado para declarar que um método pode lançar uma exceção.
 
-Caso estaja criando um metódo privado as chance de acabar utilizando é o try catch 
+*Importante*: métodos que lançam checked exceptions devem usar throws na assinatura.
 
-Quando você lança uma exceção do tipo IOException você é obrigado a colocar o throws na assinatura
+### Exceções em métodos privados
+Em métodos private, o tratamento com try-catch é mais comum, já que são usados internamente e raramente se faz necessário declarar throws.
 
-finally é sempre executado independente se está retornando alguma coisa
+### Bloco finally
+O bloco finally sempre é executado, independentemente de:
 
-Capturando múltiplas exceções caso haja uma exceção ela vai procurar o catch que melhor se adpta
+A exceção ter sido lançada ou não
 
-pode se utilizar a mais generica também, mas não podemos colocar um tipo mais generico a frente dos outros catch, pois sempre que o mais generico estiver a frente dos outros ela sempre irá cair no mais generico
+Haver um return no try ou no catch
 
-Try with resources você so pode colocar objetos ou variaveis de referencias dentro do Try with resources que implementem a interface closeable e Autocloseable, pois assim o java conseguira chamar o closeable
-São fechados na ordem inversa que eles são declarados
+    try {
+        // código
+    } catch (Exception e) {
+        // trata exceção
+    } finally {
+        // sempre executado
+    }
 
-Exceção e regras de sobrescrita Quando está sobrescrevendo um metódo você não é obrigado a declarar as mesmas exceções que aquele metódo está declarando
+### Captura de múltiplas exceções (multi-catch)
+    
+    try {
+        // código
+    } catch (IOException | SQLException e) {
+        // trata ambas
+    }
+
+*Importante:*
+
+O Java tenta capturar a exceção no catch mais específico primeiro.
+
+Nunca coloque um catch genérico (como Exception) antes de um mais específico, senão os específicos serão inatingíveis (erro de compilação).
+
+### Try-with-resources
+Usado para gerenciar recursos automaticamente (como arquivos, conexões etc.).
+
+Os objetos declarados no try() devem implementar a interface AutoCloseable (ou Closeable).
+
+O Java garante que o método close() será chamado automaticamente em ordem inversa à declaração dos recursos.
+
+    public static void lerArquivo(){
+        try(Leitor1 leito1 = new Leitor1();
+            Leitor2 leitor2 = new Leitor2()) {
+        } catch (IOException e){
+        }
+    }
+
+### Sobrescrita de métodos e exceções
+Ao sobrescrever um método:
+
+Você pode lançar as mesmas exceções que o método da superclasse.
+
+Pode lançar menos exceções.
+
+Pode não lançar nenhuma.
+
+Não pode lançar exceções mais amplas (ex: Exception) se a superclasse não as lança.
+
