@@ -537,3 +537,25 @@ Autoboxing: conversão de primitivo para objeto wrapper:
     Integer a = 10;
     int b = a; // unboxing
 
+## Strings
+
+Strings em Java são Imutáveis
+Quando você cria um objeto String, ele não pode ser alterado depois de criado. Qualquer operação que pareça modificar uma String (como concat, replace, etc.) na verdade cria um novo objeto String.
+
+### O que é o Pool de Strings (String Constant Pool)?
+O String Pool é uma área especial da memória onde o Java armazena strings literais (ex: "teste"). Isso é feito para economizar memória, já que strings são muito usadas.
+
+### Não é possível alterar uma string no pool
+Quando você faz:
+
+    String nome = "Maria";
+    nome = "Ana";
+Na verdade, você não está alterando a string "Maria", e sim criando uma nova referência para o novo valor "Ana". A string "Maria" ainda existe no pool, mas não está mais sendo usada por aquela variável.
+
+### Interning: adicionando ao pool manualmente
+Você pode forçar uma string criada com new a ser colocada no pool com o método .intern():
+
+    String s1 = "java";
+    String s2 = new String("java").intern();
+
+    System.out.println(s1 == s2); // true → agora ambos estão no pool
