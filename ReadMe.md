@@ -461,3 +461,5 @@ pode se utilizar a mais generica também, mas não podemos colocar um tipo mais 
 
 Try with resources você so pode colocar objetos ou variaveis de referencias dentro do Try with resources que implementem a interface closeable e Autocloseable, pois assim o java conseguira chamar o closeable
 São fechados na ordem inversa que eles são declarados
+
+Exceção e regras de sobrescrita Quando está sobrescrevendo um metódo você não é obrigado a declarar as mesmas exceções que aquele metódo está declarando
