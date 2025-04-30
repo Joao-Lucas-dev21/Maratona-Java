@@ -515,3 +515,25 @@ Pode não lançar nenhuma.
 
 Não pode lançar exceções mais amplas (ex: Exception) se a superclasse não as lança.
 
+## Wrappers
+Wrappers são classes que encapsulam (ou "embrulham") os tipos primitivos em objetos. Isso é necessário porque várias APIs e estruturas de dados em Java (como as Collections) não trabalham com tipos primitivos, apenas com objetos.
+
+Tipos primitivos e seus wrappers:
+![img_16.png](img_16.png)
+
+### Por que usar Wrappers?
+Coleções como ArrayList, HashMap etc. só aceitam objetos, não tipos primitivos.
+
+Permitem trabalhar com valores primitivos por referência, o que é útil quando você precisa de objetos (ex: como parâmetro em métodos que esperam objetos).
+
+### Autoboxing e Unboxing
+Autoboxing: conversão de primitivo para objeto wrapper:
+
+    int x = 5;
+    Integer y = x; // autoboxing
+
+### Unboxing: conversão de wrapper para primitivo:
+
+    Integer a = 10;
+    int b = a; // unboxing
+
