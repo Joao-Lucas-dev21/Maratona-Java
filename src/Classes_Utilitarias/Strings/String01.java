@@ -1,4 +1,4 @@
-package Classes_Utilitárias.Strings;
+package Classes_Utilitarias.Strings;
 
 public class String01 {
     public static void main(String[] args) {
