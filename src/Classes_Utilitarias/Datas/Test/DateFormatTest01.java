@@ -16,7 +16,9 @@ public class DateFormatTest01 {
         df[6] = DateFormat.getDateInstance(DateFormat.FULL);//segunda-feira, 5 de maio de 2025
 
         for (DateFormat dateFormat : df) {
-            System.out.println(dateFormat.format(calendar.getTime()));
+            System.out.println(dateFormat.format(calendar.getTime())); //Esse metodo pega o objeto Date retornado
+            // por calendar.getTime() e o formata como uma String, de acordo com o estilo do DateFormat atual da
+            // iteração.
         }
 
     }

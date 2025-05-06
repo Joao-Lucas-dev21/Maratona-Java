@@ -13,6 +13,8 @@ public class CalendarTest01 {
         System.out.println(c.get(Calendar.DAY_OF_MONTH));// Dia do mês
         System.out.println(c.get(Calendar.DAY_OF_YEAR));//Dias do ano
         System.out.println(c.get(Calendar.DAY_OF_WEEK_IN_MONTH));//Dia da semana no ano
+        System.out.println(c.get(Calendar.HOUR));// Horas sem minutos
+        System.out.println(c.get(Calendar.MINUTE));//Minutos
 
         c.add(Calendar.DAY_OF_MONTH, 0);// Adiciona dia do mês
         c.add(Calendar.HOUR, 12);// Adicionar horas
