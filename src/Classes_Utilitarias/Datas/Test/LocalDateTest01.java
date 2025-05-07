@@ -6,8 +6,8 @@ import java.time.temporal.ChronoField;
 
 public class LocalDateTest01 {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2022, Month.JANUARY, 27);
-        LocalDate agora = LocalDate.now();
+        LocalDate date = LocalDate.of(2022, Month.JANUARY, 27);//Você atribui uma data
+        LocalDate agora = LocalDate.now();//Pega a data atual
         agora = agora.plusWeeks(4);
         System.out.println(date.getYear());//retorna o ano
         System.out.println(date.getMonth());//retorna o mês
