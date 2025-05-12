@@ -559,3 +559,16 @@ Você pode forçar uma string criada com new a ser colocada no pool com o métod
     String s2 = new String("java").intern();
 
     System.out.println(s1 == s2); // true → agora ambos estão no pool
+
+## ResourceBundle
+O ResourceBundle em Java é uma classe usada para internacionalização (i18n). Ele permite que você carregue textos em diferentes idiomas de forma dinâmica, sem precisar alterar o código fonte. Com ele, você pode, por exemplo, traduzir sua aplicação para inglês, português, espanhol, etc., de forma organizada.
+
+É uma estrutura de chave-valor armazenada geralmente em arquivos .properties separados por idioma.
+
+Exemplo de arquivos:
+
+mensagem.properties (padrão)
+
+mensagem_en.properties (inglês)
+
+mensagem_pt_BR.properties (português do Brasil)
