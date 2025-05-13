@@ -19,9 +19,5 @@ public class LocalDateTest01 {
         System.out.println(date.get(ChronoField.YEAR));//Pega o ano
         System.out.println(date.get(ChronoField.MONTH_OF_YEAR));//Pega o valor do mês
         System.out.println(date);//retorna a data
-
-
-
-
     }
 }
